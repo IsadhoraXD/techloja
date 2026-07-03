@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLoja 2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-blue-600">TechLoja <span class="text-emerald-500">2.0</span></h1>
+            
+            <button onclick="mostrarCarrinho()" class="flex items-center gap-2 text-xl">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="contador" class="bg-red-500 text-white text-xs rounded-full px-2 py-0.5">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-8">
+        <input 
+            id="busca" 
+            type="text" 
+            placeholder="🔍 Buscar produtos..." 
+            class="w-full p-4 border rounded-3xl mb-8 text-lg focus:outline-none focus:border-blue-500"
+            onkeyup="filtrarProdutos()"
+        >
+
+        <div id="grid-produtos" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
